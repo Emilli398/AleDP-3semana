@@ -12,6 +12,6 @@ int main() {
     div4 = (num / 10) % 10;
     div5 = num % 10;
 
-    printf("%d   %d   %d   %d   %d\n", d1, d2, d3, d4, d5);
+    printf("%d   %d   %d   %d   %d\n", div1, div2, div3, div4, div5);
     return 0;
 }
