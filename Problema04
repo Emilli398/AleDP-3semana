@@ -14,7 +14,7 @@ int main() {
         scanf("%d", &opcao);
 
         if(opcao < 1 || opcao > 4) {
-            printf("Opção inválida. Por favor, escolha uma opção entre 1 e 4.\n\n");
+            printf("Opção inválida. Por favor, você só pode escolher uma opção entre 1 e 4.\n\n");
         }
     } while(opcao < 1 || opcao > 4);
 
