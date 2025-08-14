@@ -4,13 +4,19 @@ int main() {
     int opcao;
     float a, b, resultado;
 
-    printf("Escolha uma operação:\n");
-    printf("1 - Soma\n");
-    printf("2 - Subtração\n");
-    printf("3 - Multiplicação\n");
-    printf("4 - Divisão\n");
-    printf("Opção: ");
-    scanf("%d", &opcao);
+    do {
+        printf("Escolha uma operação:\n");
+        printf("1 - Soma\n");
+        printf("2 - Subtração\n");
+        printf("3 - Multiplicação\n");
+        printf("4 - Divisão\n");
+        printf("Opção: ");
+        scanf("%d", &opcao);
+
+        if(opcao < 1 || opcao > 4) {
+            printf("Opção inválida. Por favor, escolha uma opção entre 1 e 4.\n\n");
+        }
+    } while(opcao < 1 || opcao > 4);
 
     printf("Digite o primeiro valor: ");
     scanf("%f", &a);
@@ -31,15 +37,15 @@ int main() {
             printf("Resultado: %.2f\n", resultado);
             break;
         case 4:
-            if(b != 0)
+            if(b != 0) {
                 resultado = a / b;
-            else
+                printf("Resultado: %.2f\n", resultado);
+            } else {
                 printf("Erro: divisão por zero!\n");
-            printf("Resultado: %.2f\n", resultado);
+            }
             break;
-        default:
-            printf("Opção inválida.\n");
     }
 
     return 0;
 }
+
